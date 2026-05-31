@@ -190,7 +190,7 @@ fn demo_batch() -> BatchData {
         drug_name: "Covishield Vaccine".to_string(),
         manufacturer: "Serum Institute of India".to_string(),
         expiry_date: "2026-12-31".to_string(),
-        ipfs_hash: "QmXyz123AbcIpfsHashGoesHere".to_string(),
+        ipfs_hash: "bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m".to_string(),
         current_owner: "9yAQbF5gm3K9LzSq6Kb2bbmHnPdcYpkiY2Pobp25o9CZ".to_string(),
         is_compromised: false,
         custody_count: 3,

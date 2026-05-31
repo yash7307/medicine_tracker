@@ -7,7 +7,7 @@ const demoBatch = {
   drugName: "Covishield Vaccine",
   manufacturer: "Serum Institute of India",
   expiryDate: "2026-12-31",
-  ipfsHash: "QmXyz123AbcIpfsHashGoesHere",
+  ipfsHash: "bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m",
   currentOwner: "9yAQbF5gm3K9LzSq6Kb2bbmHnPdcYpkiY2Pobp25o9CZ",
   isCompromised: false,
   custodyCount: 3,
