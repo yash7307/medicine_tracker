@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "programs/medicine_tracker",
+    "iot_agent",
+]
+resolver = "2"

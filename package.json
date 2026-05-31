@@ -1,0 +1,24 @@
+{
+  "name": "medicine-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "api": "cargo run --manifest-path demo_api/Cargo.toml",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "next": "^14.2.33",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.25",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "typescript": "^5.9.3"
+  }
+}

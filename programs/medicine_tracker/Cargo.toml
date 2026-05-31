@@ -1,0 +1,25 @@
+[package]
+name = "medicine_tracker"
+version = "0.1.0"
+description = "Decentralized medicine authenticity and cold chain tracker on Solana"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "medicine_tracker"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = [
+    'cfg(feature, values("anchor-debug", "custom-heap", "custom-panic"))',
+    'cfg(target_os, values("solana"))',
+] }

@@ -1,0 +1,8 @@
+node_modules/
+.next/
+target/
+demo_api/target/
+.env
+.env.local
+*.log
+tsconfig.tsbuildinfo
