@@ -31,7 +31,7 @@ interface BatchData {
 }
 
 const DEMO_BATCH_ID = "DEMO-BATCH-001";
-const RUST_API_URL = "http://127.0.0.1:8080";
+const RUST_API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8080";
 
 async function fetchBatchFromChain(batchId: string): Promise<BatchData | null> {
   const normalizedId = batchId.trim().toUpperCase();
