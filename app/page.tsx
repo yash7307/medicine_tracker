@@ -107,8 +107,8 @@ export default function VerifyPage() {
                 onKeyDown={(e) => e.key === "Enter" && verify()}
               />
               <button className="primary-button" onClick={() => verify()} disabled={loading}>
-                <span className="button-icon">?</span>
-                {loading ? "Checking" : "Verify"}
+                <span className="button-icon" aria-hidden="true">🔍</span>
+                {loading ? "Checking…" : "Verify"}
               </button>
             </div>
             <button className="demo-button" onClick={fillDemo} disabled={loading}>
@@ -124,7 +124,7 @@ export default function VerifyPage() {
           </div>
           <div className="metric-grid">
             <Metric label="Custody hops" value={result?.custodyCount.toString() ?? "3"} />
-            <Metric label="Temp range" value="2-8 C" />
+            <Metric label="Temp range" value="2–8 °C" />
             <Metric label="Risk score" value={result?.isCompromised ? "High" : "Low"} />
           </div>
         </aside>
@@ -178,7 +178,7 @@ function ResultCard({ result }: { result: BatchData }) {
         <Info label="Batch ID" value={result.batchId} />
         <Info label="Manufacturer" value={result.manufacturer} />
         <Info label="Expiry" value={result.expiryDate} />
-        <Info label="Temperature window" value={`${result.minTemp}-${result.maxTemp} C`} />
+        <Info label="Temperature window" value={`${result.minTemp}–${result.maxTemp} °C`} />
         <Info label="Registered" value={new Date(result.createdAt * 1000).toLocaleDateString("en-IN")} />
       </div>
 
@@ -205,7 +205,7 @@ function ResultCard({ result }: { result: BatchData }) {
             {result.temperatureLogs.map((log) => (
               <div className="temp-item" key={log.label}>
                 <span>{log.label}</span>
-                <strong>{log.value.toFixed(1)} C</strong>
+                <strong>{log.value.toFixed(1)} °C</strong>
               </div>
             ))}
           </div>

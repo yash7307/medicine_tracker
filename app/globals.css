@@ -148,6 +148,7 @@ input {
   justify-content: center;
   min-width: 128px;
   padding: 0 18px;
+  transition: background 0.15s ease;
 }
 
 .primary-button:disabled,
@@ -156,11 +157,21 @@ input {
   opacity: 0.7;
 }
 
+.primary-button:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.primary-button:focus-visible {
+  outline: 3px solid rgba(18, 107, 95, 0.4);
+  outline-offset: 2px;
+}
+
 .button-icon {
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 999px;
   display: inline-flex;
+  font-size: 13px;
   height: 22px;
   justify-content: center;
   width: 22px;
@@ -173,6 +184,10 @@ input {
   font-weight: 700;
   margin-top: 12px;
   padding: 0;
+}
+
+.demo-button:hover:not(:disabled) {
+  text-decoration: underline;
 }
 
 .signal-panel {
@@ -312,9 +327,16 @@ input {
 .status-dot {
   background: currentColor;
   border-radius: 999px;
-  box-shadow: 0 0 0 7px rgba(20, 122, 80, 0.13);
   height: 12px;
   width: 12px;
+}
+
+.status-strip.safe .status-dot {
+  box-shadow: 0 0 0 7px rgba(20, 122, 80, 0.13);
+}
+
+.status-strip.danger .status-dot {
+  box-shadow: 0 0 0 7px rgba(180, 35, 24, 0.13);
 }
 
 .detail-grid {
@@ -398,6 +420,11 @@ input {
   font-weight: 700;
   padding: 11px 14px;
   text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.link-row a:hover {
+  opacity: 0.85;
 }
 
 .link-row a:first-child {
@@ -416,7 +443,13 @@ input {
   display: block;
   padding: 18px;
   text-align: left;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
   width: 100%;
+}
+
+.copy-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(18, 107, 95, 0.1);
 }
 
 .copy-card span {
